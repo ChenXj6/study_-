@@ -1,0 +1,110 @@
+<!--pages/answer-swiper-file/sc-moni-result/sc-moni-result.wxml-->
+<view class="container ">
+  <!-- 第一部分 -->
+  <view class="num-box">
+    <view>您的{{name}}得分：</view>
+    <view class="nums">{{score}}分</view>
+    <view>本次{{name}}总分：{{total_score}}分</view>
+  </view>
+  <!-- 第二部分 -->
+  <view class="table-box">
+    <view class="table-item">
+      <view class="tb-item-left">单选题</view>
+      <view class="tb-item-rightbox">
+        <!-- 表格右面里的内容 -->
+
+        <view class="right-box">
+          <text>答对：{{one.right_num}}题</text>
+          <text>得 {{one.right_score}}分</text>
+        </view>
+        <view class="right-box">
+          <text>答错：{{one.error_num}}题</text>
+          <text>失 {{one.error_score}}分</text>
+        </view>
+        <view class="right-box">
+          <text>未答：{{one.un_answer_num}}题</text>
+          <text>失 {{one.un_answer_score}}分</text>
+        </view>
+
+
+
+
+      </view>
+    </view>
+    <!--  2-->
+    <view class="table-item">
+      <view class="tb-item-left">多选题</view>
+      <view class="tb-item-rightbox">
+        <!-- 表格右面里的内容 -->
+        <view class="right-box">
+          <text>答对：{{more.right_num}}题</text>
+          <text>得 {{more.right_score}}分</text>
+        </view>
+        <view class="right-box">
+          <text>答错：{{more.error_num}}题</text>
+          <text>失 {{more.error_score}}分</text>
+
+        </view>
+        <view class="right-box">
+          <text>未答：{{more.un_answer_num}}题</text>
+          <text>失 {{more.un_answer_score}}分</text>
+
+        </view>
+      </view>
+    </view>
+    <!-- 3 -->
+    <view class="table-item">
+      <view class="tb-item-left">判断题</view>
+      <view class="tb-item-rightbox">
+        <!-- 表格右面里的内容 -->
+        <view class="right-box">
+          <text>答对：{{is.right_num}}题</text>
+          <text>得 {{is.right_score}}分</text>
+        </view>
+        <view class="right-box">
+          <text>答错：{{is.error_num}}题</text>
+          <text>失 {{is.error_score}}分</text>
+
+        </view>
+        <view class="right-box">
+          <text>未答：{{is.un_answer_num}}题</text>
+          <text>失 {{is.un_answer_score}}分</text>
+
+        </view>
+      </view>
+    </view>
+    <!-- 4 -->
+    <view class="table-item">
+      <view class="tb-item-left tb-item-left2 ">总计</view>
+      <view class="tb-item-rightbox">
+        <!-- 表格右面里的内容 -->
+        <view class="right-box">
+          <text>答对：{{amount.right_num}}题</text>
+          <text>得 {{amount.right_score}}分</text>
+        </view>
+        <view class="right-box">
+          <text>答错：{{amount.error_num}}题</text>
+          <text>失 {{amount.error_score}}分</text>
+
+        </view>
+        <view class="right-box">
+          <text>未答：{{amount.un_answer_num}}题</text>
+          <text>失 {{amount.un_answer_score}}分</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 第三部分 -->
+  <view class="footer">
+
+
+    <view class="btn" bindtap="openBack">再练一次</view>
+    <view class="btn" data-name="全部答案"  bindtap="navTo">全部答案</view>
+    <view class="btn"  data-name="错题答案" bindtap="navTo">错题答案</view>
+    <view class="btn"  data-name="错题练习专区" bindtap="navTo">错题练习专区</view>
+    <view class="btn" bindtap="openNavack">返回章节目录</view>
+    <view class="btn" bindtap="openMoniResult" >模考成绩记录
+    </view>
+  </view>
+
+</view>

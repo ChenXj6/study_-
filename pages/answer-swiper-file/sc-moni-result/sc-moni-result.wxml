@@ -1,0 +1,18 @@
+<!--pages/answer-swiper-file/sc-moni-result/sc-moni-result.wxml-->
+<view class="container ">
+  <!-- 第一部分 -->
+  <view class="num-box">
+    <view>您的{{name}}得分：</view>
+    <view class="nums">{{score}}分</view>
+    <view>本次实操模拟总分：{{total_score}}分</view>
+  </view>
+  <!-- 第二部分 -->
+  <view class="items-box">
+    <view class="items" wx:for="{{data}}" wx:key="item.id">
+      <text>{{item.name}}</text>
+      <text class="items-num">{{item.score}}分</text>
+    </view>
+  </view>
+<!-- 第三部分 -->
+<view class="footer"  bindtap="openBack" >再测一次</view>
+</view>

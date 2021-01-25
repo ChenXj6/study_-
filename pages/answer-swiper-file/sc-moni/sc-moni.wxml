@@ -1,0 +1,121 @@
+<!--pages/answer-swiper-file/sc-moni/sc-moni.wxml-->
+<view class="container">
+  <view class="title-box">
+    <text>{{title}}</text>
+    <text>第{{current+1}}题/共{{list_length}}题</text>
+  </view>
+
+
+  <!-- 轮播开始 -->
+  <swiper style="height:{{swiper_height}}"  bindanimationfinish="bindanimationfinish"  class="swiper-auto"    duration="{{500}}" current="{{current}}">
+    <!-- 单选 -->
+    <block wx:for="{{listData1.list}}" wx:key="key">
+      <!-- <swiper-item catchtouchmove="forbidMove"> -->
+         <swiper-item >
+      <view id="start{{isIndex}}"></view>
+        <view class="main-wrap">
+          <text>{{listData1.name}}</text>
+        </view>
+        <view class="main-sub">
+          <text class="sub-title">{{item.title}}</text>
+               <image class="sc-moni-img" wx:if="{{item.image}}" src=" {{url+item.image}}"></image>
+          <view class="sub-item" wx:for="{{item.answer_list}}" data-ans="{{item.answer}}" data-english="{{ind}}" wx:for-item="value" wx:for-index="ind" bindtap="selectAnsFn" data-userans="{{item.userAns}}" data-index="{{index}}" data-num="1" data-id="{{item.id}}"
+            wx:key="key">
+   
+            <view class="img-sub {{item.userAns&&ind==item.userAns?'com':''}}">{{ind==item.userAns?'':ind}}</view>
+            <text style="width:540rpx">{{value}} </text>
+          </view>
+      
+
+        </view>
+         <view id="end{{isIndex}}"></view>
+           <!-- 收藏图标 -->
+           <!-- <view class="shoucan-box">
+             <image src="../../image/collect.png"  data-id="{{item.id}}"  bindtap="shoucanFn" class="img-collect"></image>
+           </view> -->
+      </swiper-item>
+    </block>
+
+
+
+    <!-- 判断 -->
+    <block wx:for="{{listData3.list}}"  wx:key="key">
+      <!-- <swiper-item catchtouchmove="forbidMove"> -->
+        <swiper-item >
+        <view id="start{{isIndex}}"></view>
+        <view class="main-wrap">
+          <text>{{listData3.name}}</text>
+        </view>
+        <view class="main-sub">
+          <text class="sub-title">{{item.title}}</text>
+               <image class="sc-moni-img" wx:if="{{item.image}}" src=" {{url+item.image}}"></image>
+          <view class="sub-item2" data-userans="{{item.userAns}}" bindtap="selectAnsFn3" data-index="{{index}}" data-num="1" data-ans="{{item.answer}}">
+            <view class="img-sub img-sub2  {{item.userAns=='1'?'com':''}}"></view>
+            <text>正确</text>
+          </view>
+          <view class="sub-item2" data-userans="{{item.userAns}}" bindtap="selectAnsFn3" data-index="{{index}}" data-num="0" data-ans="{{item.answer}}">
+            <view class="img-sub img-sub2  {{item.userAns=='0'?'com':''}}"></view>
+            <text>错误</text>
+          </view>
+        </view>
+           <view id="end{{isIndex}}"></view>
+             <!-- 收藏图标 -->
+           <!-- <view class="shoucan-box">
+             <image src="../../image/collect.png"  data-id="{{item.id}}"  bindtap="shoucanFn" class="img-collect"></image>
+           </view> -->
+      </swiper-item>
+    </block>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 语音题，listData2没错 -->
+    <block wx:for="{{listData2.list}}"  wx:key="key">
+      <swiper-item>
+          <view class="main-wrap">
+          <text>{{listData2.name}}</text>
+        </view>
+        <view class="swiper-item main-sub">
+        
+          <view class="s-item-title">{{item.title}}</view>
+             <image class="sc-moni-img" wx:if="{{item.image}}" src=" {{url+item.image}}"></image>
+          <view class="s-item-btnbox">
+            <!-- <image bindtouchstart="touchStart" bindtouchend="touchEnd"  data-index="{{index}}"  data-id="{{item.id}}" class="s-item-btn" src="../../img/huida-btn.png"></image> -->
+
+
+
+
+            <view class="rel s-item-btn tap-btn wave ripple danger {{tapFlag?'active':''}}" bindtouchstart="touchStart" bindtouchend="touchEnd" data-index="{{index}}" data-id="{{item.id}}">
+              <view class="tap-btnsub">{{audioText}}</view>
+              <view class="{{tapFlag?'circle':''}}"></view>
+                 <view class="{{tapFlag?'circle':''}}"></view>
+            </view>
+          </view>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!-- footer -->
+  <view class="foot-nav ">
+    <view class="nav-next" bindtap="navPreFn">上一题</view>
+    <view bindtap="showModalFn" class="nav-ok">交卷</view>
+    <view class="nav-next" bindtap="navNextFn">下一题</view>
+  </view>
+
+</view>

@@ -1,0 +1,19 @@
+<!--pages/new-detail/new-detail.wxml-->
+<view class="container">
+  <view class="sub-content">
+    <view class="title hidden2">{{title}}
+    </view>
+    <view class="newText" wx:if="{{!articleData}}">
+      <view>{{isLoadingTexts}}</view>
+      <view class="radius" wx:if="{{isLoading}}">
+      </view>
+    </view>
+    <towxml wx:else nodes="{{article}}" />
+  </view>
+  <view class="replace"  style="height:126rpx; width:100%"></view>
+
+  <view class="main">
+
+  <!-- <view  wx:if="{{isshow==0}}" class="input-box"  bindtap="wxLogin"     >立即购买</view> -->
+  </view>
+</view>

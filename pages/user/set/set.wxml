@@ -1,0 +1,37 @@
+<!--pages/set/set.wxml-->
+<view class="container rel">
+<view class="user-box" bindtap="editImgFn" >
+<text>头像</text>
+<image class="image user-img" src="{{userimg}}"></image>
+</view>
+<view class="user-box user-box2">
+<text>姓名</text>
+<input type="text" maxlength="17" placeholder="请填写姓名"  value='{{nickname}}' bindinput="bindinput" class="inputs"></input>
+</view>
+
+
+<view class="user-box user-box2">
+<text>性别</text>
+<view class="sex-box">
+  <view class="sex-i"  data-num="1" bindtap="tapSex">
+    <view class="radius {{sex==1?'radius2':'radius1'}} "></view>
+    <text>男</text>
+  </view>
+
+  <view class="sex-i"  data-num="2" bindtap="tapSex">
+    <view class="radius  {{sex==2?'radius2':'radius1'}} "></view>
+
+      <text>女</text>
+  </view>
+</view>
+
+</view>
+
+<view class="user-box user-box2">
+<text>密码</text>
+<input type="text"   password  placeholder="{{has_pwd?'******':'请设置登录密码'}}" maxlength="17"  value='{{password}}' bindinput="bindinput2" class="inputs"></input>
+</view>
+
+
+<view class="btn" bindtap="editFn">确定</view>
+</view>

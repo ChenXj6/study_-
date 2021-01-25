@@ -1,0 +1,78 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/class/class",
+    "pages/user/user",
+    "pages/test/test",
+
+    "pages/login/login",
+    "pages/index/new-detail/new-detail",
+    "pages/login/forget/forget",
+
+    "pages/class/list/list",
+    "pages/user/list/list",
+    "pages/class/video-detail/video-detail",
+    "pages/class/read/read",
+    "pages/test/list/list",
+    "pages/answer-swiper-file/sc-moni-await/sc-moni-await",
+    "pages/answer-swiper-file/answer-result/answer-result",
+    "pages/answer-swiper-file/sc-moni-result/sc-moni-result",
+   
+    "pages/user/set/set",
+
+    "pages/answer-swiper-file/sc-moni/sc-moni",
+    "pages/user/reward/reward",
+    "pages/user/knowledge/knowledge",
+    "pages/user/search/search",
+    "pages/user/user-manage/user-manage",
+    "pages/user/class-manage/class-manage",
+  
+
+    "pages/answer-swiper-file/answer-test/answer-test",
+    "pages/answer-swiper-file/lianxi/lianxi",
+    "pages/answer-swiper-file/answer-test-notime/answer-test-notime",
+    "pages/answer-swiper-file/error-test-notime/error-test-notime",
+
+    "pages/answer-swiper-file/errorData/errorData",
+    "pages/years-list/years-list"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "国泰消安",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#005AA1",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "img/home1.png",
+        "selectedIconPath": "img/home2.png"
+      },
+      {
+        "pagePath": "pages/class/class",
+        "text": "课堂",
+        "iconPath": "img/course1.png",
+        "selectedIconPath": "img/course2.png"
+      },
+
+      {
+        "pagePath": "pages/test/test",
+        "text": "考试",
+        "iconPath": "img/cook1.png",
+        "selectedIconPath": "img/cook2.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "img/user1.png",
+        "selectedIconPath": "img/user2.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

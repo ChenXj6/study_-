@@ -1,0 +1,8 @@
+<view class="nav">
+<view>
+	<image  src="../../../image/wx-img.jpg" class="img-pic"></image>
+  <view class="k-text">如果有疑问，请加我的微信噢</view>
+
+</view>
+
+</view>

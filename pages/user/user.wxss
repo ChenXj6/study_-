@@ -1,0 +1,216 @@
+/* pages/user/user.wxss */
+page{
+  background: #fff;
+}
+/* .container {
+  font-size: 30rpx;
+  background: #fff;
+}
+
+
+.user-item-box {
+  padding: 14rpx 32rpx 0;
+  margin-top: 140rpx;
+}
+
+.item-subbox {
+  height: 94rpx;
+  border-bottom: 1px solid #F2F2F2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.item-leftbox {
+  display: flex;
+  align-items: center;
+}
+
+.out-cc {
+  width: 100%;
+  height: 24rpx;
+  background: #F2F2F2;
+}
+
+.out-btn {
+  height: 92rpx;
+  line-height: 92rpx;
+  text-align: center;
+}
+
+.item-icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 20rpx;
+}
+
+.item-next {
+  width: 16rpx;
+  height: 24rpx;
+}
+
+.item-subbox2{
+  position: relative;
+}
+
+.contact-box{
+  position: relative;
+}
+.contact{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: transparent;
+
+}
+button::after {
+  border: none;
+} */
+
+/* 新增修改 */
+
+
+.u-top-box{
+  width: 100%;
+  height: 218rpx;
+  background-color: #fff;
+  padding: 36rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+
+}
+.utb-l{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  margin-top: 3px;
+}
+
+.utb-r{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  height: 100%;
+  padding-right: 32rpx;
+  box-sizing: border-box;
+}
+.utb-l .user-img{
+  width: 142rpx;
+  height: 142rpx;
+  margin-bottom: 20rpx;
+  border-radius: 50%;
+
+}
+.user-name{
+  font-size: 48rpx;
+}
+
+.utb-r .utbr-img{
+  width: 38rpx;
+  height: 38rpx;
+  margin-right: 34rpx;
+
+}
+.utb-r .utbr-text{
+  width: 150rpx;
+  height: 60rpx;
+  border-radius: 15px;
+  border: 1px solid #979797;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+}
+
+.top2-box{
+  width: 700rpx;
+  height: 192rpx;
+  
+background: #FFFFFF;
+box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+border-radius: 8px;
+  margin: 34rpx auto 0;
+  display: flex;
+  justify-content: space-between;
+  padding:24rpx 38rpx ;
+  box-sizing: border-box;
+}
+.tb-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 24rpx;
+  color: #666666;
+  position: relative;
+}
+.tb-item .tbi-img{
+  width: 92rpx;
+  height: 92rpx;
+
+}
+.top3-box{
+  width: 700rpx;
+
+  
+background: #FFFFFF;
+box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+border-radius: 8px;
+  margin: 34rpx auto 0;
+  display: flex;
+  flex-direction: column;
+
+  padding:72rpx  28rpx  72rpx 46rpx ;
+  box-sizing: border-box;
+}
+.t3-item:not(:nth-child(1)){
+margin-top: 80rpx;
+}
+.t3-item{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.t3-item .t3i-l{
+
+  display: flex;
+align-items: center;
+font-size: 30rpx;
+color: #666666;
+}
+
+.t3il-img{
+  width: 42rpx;
+  height: 42rpx;
+  margin-right: 38rpx;
+}
+
+.t3ir{
+  width: 18rpx;
+  height: 30rpx;
+}
+
+
+
+
+.contact-box{
+  position: relative;
+}
+.contact{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: transparent;
+
+}
+button::after {
+  border: none;
+} 

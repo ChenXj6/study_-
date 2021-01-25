@@ -1,0 +1,106 @@
+page {
+    background: #F2F2F2;
+}
+
+.nav {
+    width: 100%;
+    background: white;
+    position: relative;
+}
+.nav-pos-fixed{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #fff;
+    left: 0;
+}
+.nav-top {
+    color: rgba(49, 49, 49, 1);
+    margin-top: 1px ;
+    border-bottom: 4rpx solid #F2F2F2;
+    display: flex;
+    box-sizing: border-box;
+    height: 76rpx;
+    position: relative;
+  
+}
+
+.nav-top-i {
+    height: 100%;
+    width: 25%;
+    text-align: center;
+    line-height:76rpx; 
+
+}
+.nav-top-abs{
+position: absolute;
+bottom: 0;
+left: 0;
+width: 25%;
+height: 2px;
+transition: all 0.2s;
+background: #0066AD;
+}
+.nav-tile,
+.nav-item {
+    font-size: 28rpx;
+    font-weight: 400;
+
+    border-bottom: 1px solid #F2F2F2;
+
+    display: flex;
+    align-items: center;
+ 
+    padding: 0 24rpx 0 26rpx;
+}
+.nav-item {
+
+    color:#666666;
+    line-height: 72rpx;
+    text-align: center;
+}
+
+.nav-tile{
+    color: #333333;
+    line-height: 80rpx;
+}
+.one-box{
+    width: 48%;
+}
+.two-box {
+    width: 37%;
+}
+.three-box {
+    width: 15%;
+ 
+}
+/*  */
+/* .nav-tile1{
+
+} */
+/* 模拟测试 */
+.nav-tile2,.nav-item2{
+   justify-content: space-around;
+}
+.nav-item2 .text,.nav-tile2 .text{
+    width: 45%;
+  
+ }
+
+ /*  */
+ .nav-item3,  .nav-tile3{
+     justify-content: space-between;
+ }
+ .nav-tile3 .text,   .nav-item3 .text{
+     width: 30%;
+
+ }
+/* 公用 */
+.text-overflow{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.text{
+text-align: center;
+}

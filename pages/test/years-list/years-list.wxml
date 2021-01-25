@@ -1,0 +1,17 @@
+<!--pages/cook-item/cook-item.wxml-->
+<view class="container rel">
+
+
+  <!-- 基础知识 -->
+  <view class="sub-content-box" wx:if="{{isshow}}">
+    <view class="sub-content-item"  data-id="{{item.id}}"  bindtap="navTo" wx:for="{{listData1}}" wx:key="key">
+      <view class="sub-item-left">
+        <text style="padding-right:10rpx">{{item.name}}</text>
+ 
+      </view>
+      <image class="sub-item-right" src="../../../img/jiantou1.png"></image>
+    </view>
+  </view>
+    <view class="replace" >{{logingText}}</view>
+
+</view>

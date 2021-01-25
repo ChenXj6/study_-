@@ -1,0 +1,90 @@
+<!--index.wxml-->
+<view class="container rel" style="position: relative;">
+	<!-- <image class="home-img-index" src='../../img/home-img.png'></image> -->
+
+	<view class="replace" style="width:100%;height: 92rpx;"></view>
+
+
+	<!-- 搜索框 -->
+	<view class="search-box"  bindtap="togglePop">
+		<text>{{categoryList[index].name}}</text>
+
+		<image  wx:if="{{has_class!=1}}"   src="../../image/bot.png"></image>
+	</view>
+
+
+	<!-- 轮播图 -->
+	<swiper class="index-swiper" indicator-dots="true" autoplay="true" interval="2000" duration="500">
+
+		<swiper-item class="index-swiper-i" wx:key="key"  wx:for="{{bannerList}}">
+	
+			<image class="index-swiper-img" src="{{url}}{{item.image}}"></image>
+		</swiper-item>
+
+	</swiper>
+
+	<view class="swiper-bottom"></view>
+	<!-- 两个列表 -->
+
+<view class="index-content"  style="background:#fff;">
+	<view class="method-box">
+		<!--  -->
+		<view class="method-i-box method-i-box1"  data-num="0" bindtap="switchTo">
+			<view class="method-i-l">
+				<text class="method-t1"> 看视频</text>
+				<text class="method-t2"> 您已观看视频时长</text>
+				<text class="method-t2"> {{video_length}}</text>
+			</view>
+			<image class="method-img1" src="../../image/look-btn.png"></image>
+		</view>
+		<!-- 第2个 -->
+		<view class="method-i-box method-i-box2" data-num="1" bindtap="switchTo">
+			<view class="method-i-l">
+				<text class="method-t1"> 练习</text>
+				<text class="method-t2"> 最近模拟测试成绩</text>
+				<text class="method-t2"> {{test_score}}</text>
+			</view>
+			<image class="method-img1" src="../../image/look-btn.png"></image>
+		</view>
+	</view>
+
+
+	<view class="swiper-bottom swiper-bottom2"></view>
+	<!-- 可选内容 -->
+	<!-- <view class="sele-title">
+		<text>可选课程</text>
+	</view> -->
+	<!-- 内容列表 -->
+	<view class="sele-list-box">
+		<view class="sele-list-i"  bindtap="navTo"  wx:for="{{categoryList}}"    data-id="{{item.id}}"   wx:key="key"   >
+			<image class="sele-img" src="{{url}}{{item.img}}"></image>
+			<view class="right">
+				<text class="right-text">{{item.name}}</text>
+				<view class="blue-box">
+					<text>查看课程介绍</text>
+					<image src="../../image/blue-left.png"></image>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
+
+<!-- 弹出层 -->
+<view class="popup-box {{ispopup?'block':'none'}}"       >
+
+<view class="pop-scroll">
+
+  <view class="pop-scroll-i"  wx:for="{{categoryList}}"   bindtap="selectAnsFn"  data-index="{{index}}"  data-id="{{item.id}}"   wx:key="key">
+  {{item.name}}
+  </view>
+</view>
+<view class="pop-btn"  bindtap="togglePop">
+
+  关闭
+</view>
+
+
+</view>
+
+	<view style=" background-color: #fff;" class="replace">{{logingText}}</view>
+</view>

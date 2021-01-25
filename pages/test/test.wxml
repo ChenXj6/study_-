@@ -1,0 +1,248 @@
+<!--pages/cook-item/cook-item.wxml-->
+<view class="container rel">
+
+	<!-- 轮播 -->
+	<swiper class="swiper rel">
+
+
+		<block>
+			<swiper-item>
+				<image class="swiper-item-img" src="{{url+data.img}}"></image>
+			</swiper-item>
+		</block>
+		<view class="swiper-text" wx:if="{{code==1}}">距离{{name}}剩余{{data.days}}天
+		</view>
+	</swiper>
+
+	<!-- 考试倒计时 -->
+
+	<view class="hint-box">
+		<view class="hint-l"> 考试倒计时 </view>
+		<view class="hint-r" wx:if="{{data.days>=0}}">距离{{name}}剩余{{data.days}}天</view>
+		<view class="hint-r" wx:if="{{data.days<0}}">暂无考试</view>
+	</view>
+
+	<!-- 新增内容 -->
+	<!-- <view class="t-item-box rel">
+
+		<view class="t-item-i" bindtap="navTo" data-name="章节练习" data-isrouter="2">
+			<image class="t-item-i-img" src="../../img/cook-item1.png"></image>
+			<text>章节练习</text>
+
+		</view>
+
+
+		<view class="t-item-i" bindtap="navTo" data-name="历年真题" data-isrouter="2">
+			<image class="t-item-i-img" src="../../img/cook-ti2.png">
+			</image>
+			<text>历年真题</text>
+		</view>
+
+
+
+		<view class="t-item-i" bindtap="navTo" data-name="我的收藏" data-isrouter="2">
+			<image class="t-item-i-img" src="../../img/cook-ti5.png"></image>
+			<text>我的收藏</text>
+
+		</view>
+
+
+
+		<view class="t-item-i" bindtap="navTo" data-name="我的错题" data-isrouter="3">
+			<image class="t-item-i-img" src="../../img/cook-ti6.png"></image>
+			<text>我的错题</text>
+
+		</view>
+
+
+
+
+		<image bindtap="navTo" data-name="理论模拟考试" data-isrouter="1" class="t-item-abs3 t-item-abs" src="../../img/cook-ti3.png"></image>
+
+
+		<view class="t-item-abs t-item-abs1"></view>
+
+		<view class="t-item-abs t-item-abs2"></view>
+
+
+
+
+	</view> -->
+
+
+
+	<!-- <view class="t-item-bottom"></view> -->
+
+	<!-- 第二部分 -->
+
+	<!-- 
+	<view class="t-item-box rel">
+
+		<view class="t-item-i" bindtap="navTo2">
+			<image class="t-item-i-img  t21" src="../../img/test21.png"></image>
+			<text>实操章节</text>
+
+		</view>
+
+
+		<view class="t-item-i " bindtap="navTo" data-name="随机小练" data-isrouter="2">
+			<image class="t-item-i-img t22" src="../../img/test22.png"></image>
+
+
+			<text     >随机小练</text>
+
+		</view>
+
+
+
+		<view class="t-item-i contact-box">
+			<image bindtap="" class="t-item-i-img" src="../../img/kefu.png"></image>
+			<text>在线咨询</text>
+			<button class="contact" open-type="contact" bindcontact="handleContact"></button>
+
+		</view>
+
+
+
+		<view class="t-item-i" bindtap="navTo3">
+			<image class="t-item-i-img" src="../../img/test24.png"></image>
+			<text>排行榜</text>
+
+		</view>
+
+
+		<image bindtap="navTo2" class="t-item-abs3 t-item-abs" src="../../img/cook-ti4.png"></image>
+
+
+		<view class="t-item-abs t-item-abs1"></view>
+
+		<view class="t-item-abs t-item-abs2"></view>
+
+
+	</view> -->
+
+
+
+	<!-- 新增修改 -->
+
+
+	<view class="test-box">
+		<view class="t-top-box">
+			<view class="ttb-l" bindtap="navTo" data-name="理论模拟考试" data-isrouter="1">
+				<image  src="../../img/cook-ti3.png" class="l-img"></image>
+				<view class="ttb-l-abs">
+					<view class="l-t1">理论</view>
+					<view class="l-t2">模拟考试</view>
+				</view>
+			</view>
+			<view class="ttb-r">
+
+				<!-- 章节练习 -->
+				<view class="ttbr-item"  bindtap="navTo" data-name="章节练习" data-isrouter="2"> 
+					<image src="../../img/cook-item1.png" class="r-img"></image>
+					<text class="l-t1">章节练习</text>
+				</view>
+				<!-- 历年真题 -->
+				<view class="ttbr-item" bindtap="navTo" data-name="历年真题" data-isrouter="2">
+					<image src="../../img/cook-ti2.png" class="r-img"></image>
+					<text class="l-t1">历年真题</text>
+				</view>
+				<!-- 我的收藏 -->
+				<view class="ttbr-item" bindtap="navTo" data-name="我的收藏" data-isrouter="2">
+					<image src="../../img/cook-ti5.png" class="r-img"></image>
+					<text class="l-t1">我的收藏</text>
+				</view>
+
+
+
+
+				<!-- 我的错题 -->
+				<view class="ttbr-item" bindtap="navTo" data-name="我的错题" data-isrouter="3">
+					<image src="../../img/cook-ti6.png" class="r-img"></image>
+					<text class="l-t1">我的错题</text>
+				</view>
+
+			</view>
+		</view>
+
+
+		<view class="text-border"></view>
+
+
+		<view class="t-top-box">
+			<view class="ttb-l " bindtap="navTo2" >
+				<image src="../../img/cook-ti4.png" class="l-img"></image>
+				<view class="ttb-l-abs">
+					<view class="l-t1">实操</view>
+					<view class="l-t2">模拟考试</view>
+				</view>
+			</view>
+			<view class="ttb-r">
+
+				<!-- 实操章节 -->
+				<view class="ttbr-item" bindtap="navTo2">
+					<image src="../../img/test21.png" class="r-img"></image>
+					<text class="l-t1">实操章节</text>
+				</view>
+				<!-- 随机小练 -->
+				<view class="ttbr-item" bindtap="navTo" data-name="随机小练" data-isrouter="2">
+					<image src="../../img/test22.png" class="r-img"></image>
+					<text class="l-t1">随机小练</text>
+				</view>
+				<!-- 在线咨询 -->
+				<view class="ttbr-item">
+					<image src="../../img/test23.png" class="r-img"></image>
+					<text class="l-t1">在线咨询</text>
+					<button class="contact" open-type="contact" bindcontact="handleContact"></button>
+				</view>
+
+				<!-- 排行榜 -->
+				<view class="ttbr-item" bindtap="navTo3">
+					<image src="../../img/test24.png" class="r-img"></image>
+					<text class="l-t1">排行榜</text>
+				</view>
+			</view>
+		</view>
+	</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</view>
+
+<!-- 
+1、区分是answer-test还是answer-test-notime还是error-test-notime
+
+
+
+- 根据是否有答题时间区分,第一个有时间、交卷、，第二个不需要时间、交卷
+- 是否保存本地
+- 是收藏还是移除题目
+
+answer-test：理论模拟考试
+answer-test-notime：我的收藏，全部答案，随机小练、章节练习，历年真题，错题答案
+error--test-notime：我的错题，错题练习专区
+
+
+/**
+@param 
+*name  //是什么，来决定调用哪个接口  存储到本地了
+*isrouter //判断是跳转哪个，1代表answer-test,2answer-test-notime,3error-test-notime
+*issave //退出是否保存到本地   //issave=true
+*ismethod //用哪种模式  //ismethod=1
+*isbtn=false  //是否显示交卷按钮  ，默认是字符'true' ，这个只有收藏用到了
+*/
+
+
+sc-moni为实操模拟考试 单独的
+ -->

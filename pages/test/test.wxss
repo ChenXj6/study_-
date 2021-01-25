@@ -1,0 +1,214 @@
+/* pages/course/course.wxss */
+.container{
+  text-align: center;
+    box-sizing: border-box;
+}
+
+.title{
+  height: 60rpx;
+  color: #999999;
+  line-height: 60rpx;
+}
+
+
+/* 轮播 */
+swiper, .swiper-item-img{
+  width: 100%;
+  height: 292rpx;
+
+}
+swiper{
+  color: #FFFFFF;
+  font-size: 32rpx;
+}
+
+
+/* 新增内容 */
+.t-item-box{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 380rpx;
+  border-color: #FFFFFF;
+
+}
+.t-item-box:last-child{
+border: 1px solid #F2F2F2;
+
+}
+.t-item-abs{
+position: absolute;
+background-color: #F2F2F2;
+margin:auto;
+
+}
+.t-item-abs3{
+  width: 200rpx;
+  height: 200rpx;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 50%;
+  z-index: 10;
+}
+.t-item-abs1{
+  width: 100%;
+  height: 1px;
+  top: 0;
+  bottom: 0;
+  left: 0;
+
+
+}
+.t-item-abs2{
+  width: 1px;
+  height: 100%;
+  top: 0;
+
+  left: 0;
+  right: 0;
+}
+.t-item-i{
+  width: 50%;
+  height: 50%;
+    display: flex;
+  flex-direction: column;
+justify-content: space-between;
+  align-items: center;
+  font-size: 28rpx;
+  padding: 36rpx  0;
+  box-sizing: border-box;
+}
+.t-item-i-img{
+  width: 48rpx;
+ height: 54rpx;
+}
+.t-item-bottom{
+  width: 100%;
+  height: 5px;
+  background-color:#F2F2F2 ;
+}
+.t21{
+  width: 64rpx !important;
+  height: 54rpx !important;
+}
+.t22{
+  width: 56rpx !important;
+  height: 56rpx !important;
+}
+/* 新增客服 */
+.contact-box{
+  position: relative;
+}
+.contact{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: transparent;
+
+}
+button::after {
+  border: none;
+}
+/* 考试倒计时 */
+.hint-box{
+  width: 100%;
+  height:   60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  display: flex;
+  border-bottom: 1rpx solid #358DEC;
+}
+.hint-l{
+  width: 28%;
+background: #358DEC;
+color: #EBF3FC;
+text-align: center;
+}
+.hint-r{
+  width: 72%;
+  background: #fff;
+  color: #333333;
+  padding-left: 32rpx;
+  box-sizing: border-box;
+  text-align: left;
+}
+/* 新增修改 */
+.test-box{
+padding: 44rpx 0;
+box-sizing: border-box;
+display: flex;
+flex-direction: column;
+align-items: center;
+
+}
+.t-top-box{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+
+}
+.ttb-l{
+  width: 212rpx;
+  height: 268rpx;
+  margin-right: 8rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+
+}
+.ttb-r{
+  width: 432rpx;
+  display: flex;
+flex-wrap: wrap;
+}
+.ttb-l-abs{
+  position: absolute;
+  bottom: 20rpx;
+  left: 0;
+  width: 100%;
+  font-size: 28rpx;
+}
+.ttb-l .l-img{
+  width: 212rpx;
+  height: 268rpx;
+}
+
+.ttbr-item{
+  width: 212rpx;
+  height: 130rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  box-sizing: border-box;
+}
+.ttbr-item:not(:nth-child(-n+2)){
+  margin-top: 8rpx;
+}
+.ttbr-item  .l-t1{
+  position: absolute;
+  bottom: 16rpx;
+  left: 0;
+  width: 100%;
+  font-size: 28rpx;
+
+}
+.ttbr-item .r-img{
+  width: 212rpx;
+  height: 130rpx;
+}
+.text-border{
+  width: 652rpx;
+  height: 1px;
+  background: #E1E1E1;
+  margin: auto;
+  margin: 28rpx auto;
+
+  
+}

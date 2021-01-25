@@ -1,0 +1,47 @@
+<view class="nav">
+  <text class="nav-title">开始日期</text>
+  <picker mode="date" value="{{date}}" bindchange="bindDateChange">
+    <view class="picker">
+      {{date}}
+    </view>
+  </picker>
+</view>
+<view class="nav nav-two">
+  <text class="nav-title">结束日期</text>
+  <picker mode="date" value="{{date1}}" bindchange="bindDateChange1">
+    <view class="picker">
+      {{date1}}
+    </view>
+  </picker>
+</view>
+
+<view class="banner">
+  <view class="banner-item" wx:for="{{listData}}" wx:key="item.id">
+    <view class="banner-top">
+      <view style="display:flex; align-items: center;">
+        <image src="{{item.customerInfo.avatar}}" class="img-photo"></image>
+        <text class="banner-text">{{item.customerInfo.nickname}}</text>
+      </view>
+      <view class="header-date">{{item.date}}</view>
+    </view>
+    <view class="banner-uu">
+      <!-- 消防员初级基础知识 -->
+      <view class="banner-li" wx:if="{{value.process}}" wx:for-item="value" wx:for="{{item.curriculum_log}}" wx:key="item.id">
+        <text class="banner-text">{{value.name}}</text>
+        <text class="li-rate"  >已做{{value.process}}</text>
+      </view>
+      <!-- "初级消防设置操作员" -->
+      <view class="banner-li" wx:if="{{value.score}}" wx:for-item="value" wx:for="{{item.simulationTest_log}}" wx:key="item.id">
+        <text class="banner-text">{{value.question_bank_name}}</text>
+        <text class="li-rate"  >{{value.score}}分</text>
+      </view>
+          <view class="banner-li"  wx:if="{{value.process}}" wx:for-item="value" wx:for="{{item.video_log}}" wx:key="item.id">
+      <text class="banner-text">{{value.name}}</text>
+      <text class="li-rate"  >已看{{value.process}}</text>
+    </view>
+    </view>
+    <!-- "" -->
+
+</view>
+<view class="replace">{{logingText}}</view>
+</view>

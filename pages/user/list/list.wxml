@@ -1,0 +1,24 @@
+<!--pages/cook-item/cook-item.wxml-->
+<view class="container rel">
+  <!-- 内容 -->
+  <!-- 基础知识 -->
+  <view class="sub-content-box" >
+    <view class="sub-content-item"   data-id="{{item.id}}" bindtap="navTo" wx:for="{{listData}}" wx:key="key">
+      <view class="sub-item-left">
+        <text class="text1">{{item.class_name}}</text>
+          <view class="text2"> 学生数量：{{item.class_num}}</view>
+      </view>
+
+      <image class="sub-item-right" src="../../../img/jiantou1.png"></image>
+    </view>
+  </view>
+  
+
+
+
+
+
+
+    <view class="replace" >{{logingText}}</view>
+
+</view>

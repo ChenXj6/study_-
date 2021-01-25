@@ -1,0 +1,44 @@
+<view class="main">
+	<swiper :duration="150" style="height:{{swiper_height}}" bindanimationfinish="bindanimationfinish" class="swiper-auto" current="{{current}}">
+
+
+		<swiper-item wx:for="{{topicData}}" wx:key="key">
+			<image mode="aspectFit" class="swiper-img" src="{{url}}{{item.image}}"></image>
+		</swiper-item>
+	</swiper>
+	<!-- 翻页 -->
+
+	<view class="foot-nav">
+		<view class="nav-next" bindtap="navPreFn">
+			上一页
+
+		</view>
+		<!-- 目录 -->
+		<view class="nav-ok" bindtap="togglePopup">
+
+			目录
+
+		</view>
+
+		<view class="nav-next" bindtap="navNextFn">
+			下一页
+		</view>
+	</view>
+
+
+
+	<view class="popup-box  {{ispopup?'block':''}}">
+		<view class="pop-con">
+
+			<view class="pop-c-sub">
+				<block wx:for="{{topicData}}" wx:key="key">
+					<view class="pop-c-sub-i  {{current>=index?'pop-c-sub-i2':''}}" data-index="{{index}}" bindtap="tapItemTopic" >{{index+1}}</view>
+				</block>
+			</view>
+		</view>
+		<!-- 按钮 -->
+		<view class="pop-btn-box">
+			<view class="pop-btn" bindtap="togglePopup">返回</view>
+		</view>
+	</view>
+</view>

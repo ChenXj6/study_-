@@ -1,0 +1,9 @@
+<view class="container">
+
+  <image class="await-img" src="../../image/await.png"></image>
+  <view class="await-text"> 老师判卷之后可在历史记录中查看哦
+    <view> 请耐心等待～</view>
+  </view>
+  <view class="btn" bindtap="openTo">知道了</view>
+
+</view>

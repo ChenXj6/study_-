@@ -1,0 +1,144 @@
+<!--pages/user/user.wxml-->
+<view class="container">
+	<!-- 头像 -->
+	<!-- <view class="top-back rel">
+		<view class="user-box" bindtap="openLoginFn">
+			<image src="{{userimg}}" class="user-img"  ></image>
+			<view class="user-name hidden1" >{{username}}</view>
+		</view>
+	</view> -->
+	<!--  列表 -->
+	<!-- <view class="user-item-box"> -->
+	<!-- <view class="item-subbox"   data-title="{{item.title}}"    wx:for="{{list}}" wx:key="key"  bindtap="goPage" >
+			<view class="item-leftbox">
+	
+				<image src="{{item.img}}" class="item-icon"></image>
+				<view>{{item.title}}</view>
+			</view>
+			<image src="../../image/user-next.png" class="item-next"></image>
+		</view> -->
+
+
+
+
+	<!-- 知识点解惑 -->
+	<!-- <view class="item-subbox  item-subbox2 "    >
+		<button class="contact" open-type="contact" bindcontact="handleContact"></button>
+			<view class="item-leftbox">
+				<image src="../../image/user-7.png" class="item-icon"></image>
+				<view>知识点解惑</view>
+			</view>
+			<image src="../../image/user-next.png" class="item-next"></image>
+		</view> -->
+
+
+
+	<!-- 设置 -->
+	<!-- <view class="item-subbox"   data-title="设置"  bindtap="goPage" >
+			<view class="item-leftbox">
+	
+				<image src="../../image/user-8.png" class="item-icon"></image>
+				<view>设置</view>
+			</view>
+			<image src="../../image/user-next.png" class="item-next"></image>
+		</view> -->
+	<!-- </view> -->
+	<!-- 退出 -->
+	<!-- <view class="out-box">
+		<view class="out-cc"></view>
+		<view class="out-btn" bindtap="outLoginFn">{{code==1?'退出登录':'去登录'}}</view>
+		<view class="out-cc"></view>
+	</view> -->
+
+
+	<!-- 新增修改 -->
+
+	<view class="utb-l" bindtap="openLoginFn">
+		<image src="{{userimg}}" class="user-img"></image>
+		<view class="user-name hidden1">{{username}}</view>
+	</view>
+
+	<view class="utb-r">
+		<view bindtap="openLoginFn" class="utbr-text">编辑信息</view>
+		<image bindtap="outLoginFn" src="/img/out.png" class="utbr-img"></image>
+
+	</view>
+
+
+
+
+
+	<view class="top2-box">
+		<view class="tb-item" data-title="班级管理" bindtap="goPage">
+			<image src="/img/t1.png" class="tbi-img"></image>
+			<text> 班级管理</text>
+		</view>
+		<view class="tb-item">
+			<button class="contact" open-type="contact" bindcontact="handleContact"></button>
+			<image src="/img/t2.png" class="tbi-img"></image>
+			<text> 专属客服</text>
+		</view>
+		<view class="tb-item" data-title="成绩查询" bindtap="goPage">
+			<image src="/img/t3.png" class="tbi-img"></image>
+			<text> 成绩查询</text>
+		</view>
+		<view class="tb-item">
+			<button class="contact" open-type="contact" bindcontact="handleContact"></button>
+			<image src="/img/t4.png" class="tbi-img"></image>
+			<text> 投诉建议</text>
+		</view>
+	</view>
+
+	<view class="top3-box">
+		<view class="t3-item">
+			<button class="contact" open-type="share"></button>
+			<view class="t3i-l">
+				<image src="/img/t5.png" class="t3il-img"></image>
+				<text>分享小程序</text>
+			</view>
+			<image src="/img/jiantou1.png" class="t3ir"></image>
+		</view>
+
+		<!-- <view class="t3-item">
+			<view class="t3i-l">
+				<image src="/img/t6.png" class="t3il-img"></image>
+				<text>添加到我的小程序</text>
+			</view>
+			<image src="/img/jiantou1.png" class="t3ir"></image>
+		</view> -->
+		<view class="t3-item">
+			<button class="contact" open-type="contact" bindcontact="handleContact"></button>
+			<view class="t3i-l">
+				<image src="/img/t7.png" class="t3il-img"></image>
+				<text>知识点解惑</text>
+			</view>
+			<image src="/img/jiantou1.png" class="t3ir"></image>
+		</view>
+		<view class="t3-item" bindtap="tapClearFn">
+			<view class="t3i-l">
+				<image src="/img/t8.png" class="t3il-img"></image>
+				<text>清除缓存</text>
+			</view>
+			<image src="/img/jiantou1.png" class="t3ir"></image>
+		</view>
+
+
+
+	</view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</view>

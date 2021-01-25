@@ -1,0 +1,98 @@
+<view class="nav-video">
+	<video id="myVideo" autoplay wx:if="{{index==1}}" class="rel" initial-time="{{list.startTime}}" src="{{url}}{{list.video}}" controls danmu-list="{{danmuList}}" bindtimeupdate="bindtimeupdate">
+	</video>
+
+
+
+
+
+	<!-- audio开始 -->
+
+	<view class='audioPlayer' wx:if="{{index==2}}">
+		<view class='player'>
+			<view class='audioControls'>
+				<view class='bottom' catchtap='playAudio'>
+					<!-- 按钮 -->
+					<view wx:if="{{isPlayAudio}}">
+						<image src='../../../image/pause.jpg' />
+					</view>
+					<view wx:else>
+						<image src='../../../image/play.jpg' />
+					</view>
+				</view>
+				<view class='slider'>
+					<slider bindchange='sliderChange' block-color="#f8c130" activeColor='#f8c130' backgroundColor="#aeaeae" block-size="12" value='{{audioTime}}' />
+				</view>
+				<view class='time'>
+					<view class="timeLeft">{{showTime1}}</view>
+					<view class="timeRight">{{showTime2}}</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<!-- audio结束 -->
+</view>
+
+
+
+
+<view wx:if="{{index==1}}" class="video-replace"></view>
+<view wx:if="{{index==2}}" class="audio-replace"></view>
+
+<view class="nav-bot">
+	<text class="nav-title">{{list.title}}</text>
+	<view class="nav-wrap">
+		<view class="nav-look">
+			<image src="../../../image/look.png" class="img-look"></image>
+			<text>{{list.view_num}}</text>
+		</view>
+		<text class="nav-time">{{list.create_time}}</text>
+	</view>
+</view>
+
+<!-- 评论 -->
+<view class="banner">
+	<text class="banner-title">评论</text>
+	<view class="banner-item" wx:for="{{commentData}}" wx:key="key">
+		<image src="{{item.avatar?item.avatar:img}}" class="img-phtot"></image>
+		<view class="banner-right">
+			<!-- 评价某条评论 -->
+			<text class="banner-name" bindtap="focusFn" data-inputTx="{{item.nickname}}" data-pidIndex="{{index}}" data-id="{{item.id}}">{{item.nickname}}</text>
+			<text class="banner-content" bindtap="focusFn" data-inputtx="{{item.nickname}}" data-pidIndex="{{index}}" data-id="{{item.id}}">{{item.content}}</text>
+			<!-- 二级评论 -->
+			<view class="banner-box" wx:if="{{item.reply_num!=0}}">
+				<view class="banner-commite" wx:for="{{item.reply_content}}" wx:for-item="values" wx:key="key">
+					<text class="commite-name">{{values.nickname?values.nickname:'匿名用户'}}:</text>
+					<text class="commite-content">{{values.content}}</text>
+				</view>
+				<text wx:if="{{item.reply_num>2&&item.isShouqi==1}}" data-index="{{index}}" data-review_id="{{item.id}}" class="box-btn" bindtap="moreClick">共{{item.reply_num}}条回复 > </text>
+				<text wx:if="{{item.isShouqi==2}}" data-index="{{index}}" data-review_id="{{item.id}}" class="box-btn" bindtap="moreClick" data-more="1">展开更多</text>
+				<text class="box-btn2 {{shouqiIndex==index?'btn3':''}}" bindtap="moreShouqi" wx:if="{{item.isShouqi==3}}" data-index="{{index}}" data-review_id="{{item.id}}"> 收起</text>
+			</view>
+			<view class="banner-bot">
+				<text class="banner-time">{{item.create_time}}</text>
+				<view class="banner-click">
+					<view class="banner-click2 banner-click3" bindtap="focusFn" data-inputtx="{{item.nickname}}" data-pidIndex="{{index}}" data-id="{{item.id}}">
+						<image src="../../../image/reply.png" class="img-reply"></image>
+					</view>
+					<!-- 取消点赞 -->
+					<view wx:if="{{item.is_like==1}}" class="banner-click2" bindtap="nolikeTapFn" data-id="{{item.id}}" data-index="{{index}}">
+						<image src="{{item.is_like==1?'../../../img/zan2.png':'../../../image/click.png'}}" class="img-click"></image>
+						<text>{{item.thumbsup_num}}</text>
+					</view>
+					<!-- 点赞 -->
+					<view wx:if="{{item.is_like==0}}" class="banner-click2" bindtap="likeTapFn" data-id="{{item.id}}" data-index="{{index}}">
+						<image src="{{item.is_like==1?'../../../img/zan2.png':'../../../image/click.png'}}" class="img-click"></image>
+						<text>{{item.thumbsup_num}}</text>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</view>
+<view class="replace">{{logingText}}</view>
+<view class="replace"></view>
+<!-- 回复框 -->
+<view class="main">
+	<input :adjust-position="{{false}}"	 type="text" focus="{{isfocus}}" bindconfirm="bindconfirm" class="input-box" placeholder="@{{inputText}}" bindinput="bindinput" bindblur="bindblur" value='{{content}}'></input>
+</view>

@@ -1,0 +1,38 @@
+<!--pages/login/login.wxml-->
+<view class="container">
+  <view class="logo-img">
+    <image src="../../../img/logo.png"></image>
+    <view>国泰消安</view>
+  </view>
+  <view class="input-box orel">
+  <view class="input-son">
+      <input placeholder="输入手机号" maxlength="14" type='number' bindinput="bindInput" class="phone"></input>
+ 
+  
+  </view>
+   <view class="input-son  input-son2">
+    <input placeholder="请输入输入验证码" maxlength="6" bindinput="bindInputCode"></input>
+       <view class="code" bindtap="sendCodeFn">{{codeText}}</view>
+  </view>
+
+  
+  <view class="input-son">
+      <input placeholder="请输入密码" maxlength="14" type='password' bindinput="bindInput2" class="phone"></input>
+ 
+  
+  </view>
+
+   </view>
+
+
+
+
+
+
+
+
+
+
+
+  <view bindtap="opentoBtn" style="color:#FFFFFF" class="buttonss">登录</view>
+</view>

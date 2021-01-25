@@ -1,0 +1,59 @@
+<!--pages/course-item-sub/course-item-sub.wxml-->
+<view class="container rel">
+  <view class="collapse-box">
+    <van-collapse  wx:for="{{listData}}" wx:key="key" wx:for-item="value" wx:for-index="ind" value="{{ activeNames }}" custom-class="custom-class" bind:change="onChange"  >
+      <!-- value="{{value.isshouqi?'收起':'展开'}}" -->
+      <van-collapse-item name="{{value.id}}" custom-class="custom-item-class" >
+
+        <view class="coll-item-title" slot="title" >
+
+      {{value.name}}
+        </view>
+      
+        <view class="item-tip-box"   wx:if="{{value.logingText}}">{{value.logingText}}</view>
+        <!-- 内容开始 -->
+        <view class="container-item-box" content-class="qqq">
+          <view class="container-item rel" wx:for="{{value.list}}"  wx:key="key" data-index="{{index}}" data-id="{{item.id}}" bindtap="goDetail">
+            <image src="{{url}}{{item.image}}"></image>
+            <view class="item-text">
+              <view class="item-text-sub hidden2">
+                {{item.title}}
+              </view>
+            </view>
+          </view>
+          <!-- 点击加载更多 -->
+          <view bindtap="tapMoreFn" data-id="{{value.id}}" data-index="{{ind}}" class="item-tap-more"   wx:if="{{value.isshowbtn}}" >点击加载更多 </view>  
+        </view>
+        <!-- 内容结束 -->
+      </van-collapse-item>
+    </van-collapse>
+  </view>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <view class="replace">{{logingText}}</view>
+
+</view>

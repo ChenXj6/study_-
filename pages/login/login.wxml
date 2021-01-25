@@ -1,0 +1,35 @@
+<!--pages/login/login.wxml-->
+<view class="container">
+
+<image src="/img/login-bg.png" class="login-bg "></image>
+	<view class="logo-img">
+		<image src="../../img/logo.png"></image>
+		<view>国泰消安</view>
+	</view>
+	<view class="input-box rel">
+		<view class="input-son">
+			<input placeholder="输入手机号" maxlength="14" type='number' bindinput="bindInput" class="phone"></input>
+
+
+		</view>
+		<view class="input-son">
+			<input password   placeholder="请输入输入密码" maxlength="6" bindinput="bindpassword"></input>
+
+				  <view class="forget" bindtap="navForget">忘记密码？</view>
+  <!-- <view class="code" bindtap="sendCodeFn">{{codeText}}</view> -->
+		</view>
+	</view>
+	<view bindtap="opentoBtn" style="color:#FFFFFF" class="buttonss buttonss1">登录</view>
+
+
+	<view  style="color:#FFFFFF" class="buttonss buttonss2">
+		<image class="image"   src="../../image/wx.png"></image>
+    <view wx:if="{{showPhoneBtn > 0}}"> <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获取手机号码</button> </view>
+    <view wx:else> <button bindtap="wxLogin">微信授权登录</button> </view>
+	</view>
+	
+  <!-- <view bindtap="gosignUp">注册</view> -->
+
+
+</view>
+

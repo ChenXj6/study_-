@@ -1,0 +1,13 @@
+<view class="nav">
+	<view class="nav-top">
+		<text class="two-box">考试时间</text>
+		<text class="three-box">考试分数</text>
+	</view>
+	<view class="nav-item" wx:for="{{listData}}" wx:key="key">
+		<text class="two-box">{{item.create_time_text}}</text>
+		<text class="three-box">{{item.score}}</text>
+	</view>
+
+   <view class="replace" >{{logingText}}</view>
+   <view class="replace"  style="background-color:#F2F2F2"></view>
+</view>

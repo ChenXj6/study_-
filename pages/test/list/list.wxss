@@ -1,0 +1,91 @@
+/* pages/course/course.wxss */
+.container {
+  padding: 0 32rpx 0 32rpx;
+  font-size: 36rpx;
+}
+
+.title-box {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  background: #fff;
+  padding-top: 20rpx;
+  text-align: center;
+
+
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* *
+  取消定位了
+
+  
+  */
+}
+
+.title-box .title {
+  padding: 0 20rpx;
+  min-width:150rpx ;
+  box-sizing: border-box;
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+  color: #fff;
+  height: 60rpx;
+  line-height: 60rpx;
+  background: rgba(0, 90, 161, 1);
+  border-radius: 8rpx;
+}
+
+.title-box .title2 {
+  background: rgba(255, 255, 255, 1);
+  color: #333333;
+  line-height: 60rpx;
+  border-radius: 4px;
+  border: 1px solid rgba(240, 240, 240, 1);
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  min-width:150rpx ;
+
+    /* 
+  取消定位所以这个不需要了
+  width: 204rpx;
+
+  */
+}
+
+.sub-content-box {
+
+  padding: 0 16rpx;
+
+
+  margin-top: 106rpx;
+  /* 
+  取消定位所以这个不需要了
+
+  */
+
+}
+
+.sub-content-item {
+
+  display: flex;
+  border-bottom: 1px solid #F2F2F2;
+  align-items: center;
+
+  padding: 18rpx 0;
+  box-sizing: border-box;
+
+
+
+}
+
+.sub-item-right {
+  width: 20rpx;
+  height: 28rpx;
+
+}
+
+/* 新增修改 */
+.sub-item-left {
+  width: calc(100% - 20rpx);
+}

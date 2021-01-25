@@ -1,0 +1,108 @@
+/* pages/course-item/course-item.wxss */
+/* .container{
+
+}
+
+.chuji-box{
+  width: 100%;
+  margin-top: 30rpx;
+    padding: 0 27rpx 56rpx 27rpx;
+    box-sizing: border-box;
+}
+.chuji-box:nth-child(1){
+
+  margin-top: 0 !important;
+}
+
+.title{
+  font-size: 36rpx;
+  color:rgba(51,51,51,1);
+  text-align: center;
+}
+
+
+
+
+
+.text-box{
+  font-size: 36rpx;
+margin-top: 42rpx;
+position: relative;
+}
+.text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 32rpx;
+
+}
+.text-color1{
+  background: #3BC9EE;
+}
+.text-color2{
+  background: #E48135;
+}
+.text-color3{
+  background: #50C044;
+}
+.text .img{
+  width: 42rpx;
+  height: 42rpx;
+  margin-right:16rpx ;
+}
+.text-box .text1:nth-child(1){
+  width: 396rpx;
+  height: 200rpx;
+
+  border-radius: 10px;
+  border: 4px solid #FFFFFF;
+}
+.text-box .text1:nth-child(2){
+
+  position: absolute;
+  top: 98rpx;
+  left: 350rpx;
+
+  width: 308rpx;
+height: 140rpx;
+border-radius: 8px;
+border: 4px solid #FFFFFF;
+} */
+
+/* 新增修改 */
+.class-bg{
+  width: 100%;
+  height: 476rpx;
+  margin-bottom: 46rpx;
+}
+.sub-cont{
+  padding: 0 34rpx;
+  box-sizing: border-box;
+}
+.sc-item-box{
+  margin-top: 22rpx;
+  display: flex;
+  justify-content: space-between;
+
+}
+.sc-item-box .item{
+    width: 324rpx;
+    height: 198rpx;
+    position: relative;
+
+}
+.i-img{
+  width: 324rpx;
+  height: 198rpx;
+}
+.item-text{
+  position: absolute;
+  right: 32rpx;
+  top:32rpx ;
+  display: flex;
+  flex-direction: column;
+  color: #E6F1FC;
+  font-size: 24rpx;
+  line-height: 40rpx;
+}

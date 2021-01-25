@@ -1,0 +1,32 @@
+/* pages/answer-swiper-file/sc-moni-await/sc-moni-await.wxss */
+.container{
+  height: 100vh;
+
+}
+.await-img{
+padding-top: 168rpx;
+  margin: 0 auto;
+  width: 400rpx;
+  height: 300rpx;
+}
+.await-text{
+  margin-top: 70rpx;
+font-size:30rpx;
+    text-align: center;
+    color: #999999;
+}
+.btn{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100rpx;
+  margin: auto;
+  width: 536rpx;
+  height: 100rpx;
+  color: #FFFFFF;
+  font-size: 36rpx;
+  line-height: 100rpx;
+  background:linear-gradient(90deg,rgba(56,164,239,1) 0%,rgba(0,102,173,1) 100%);
+border-radius:25px;
+text-align: center;
+}

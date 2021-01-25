@@ -1,0 +1,49 @@
+/* pages/answer-swiper-file/sc-moni-result/sc-moni-result.wxss */
+.container{
+  padding-top: 14rpx;
+  font-size: 28rpx;
+  font-weight: 500;
+}
+.num-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.num-box .nums{
+height: 112rpx;
+line-height: 112rpx;
+color: #0066AD;
+font-weight: 600;
+font-size:60rpx;
+}
+/*  */
+.items-box{
+  margin-top: 100rpx;
+}
+.items-box .items{
+  height: 60rpx;
+  line-height: 60rpx;
+  padding: 0 80rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+.items-num{
+  text-align: right;
+  color: #0066AD;
+  font-size: 36rpx;
+}
+.footer{
+  color: #fff;
+  position: absolute;
+  bottom: 100rpx;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width:536rpx;
+height:100rpx;
+background:linear-gradient(90deg,rgba(56,164,239,1) 0%,rgba(0,102,173,1) 100%);
+border-radius:50rpx;
+text-align: center;
+line-height: 100rpx;
+}

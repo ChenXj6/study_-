@@ -1,0 +1,77 @@
+/* pages/login/login.wxss */
+.container{
+  padding: 28rpx 80rpx 0 80rpx;
+  font-size: 28rpx;
+}
+.logo-img{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  font-size: 38rpx;
+  margin-bottom: 96rpx;
+  font-weight:600;
+}
+.logo-img image{
+width: 140rpx;
+height: 140rpx;
+margin-bottom: 18rpx;
+}
+.input-box input{
+  height: 100%;
+  font-size: 28rpx;
+ 
+}
+.code{
+  z-index: 99;
+  width: 200rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  position: absolute;
+  right: 14rpx ;
+  color: #ffff;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background:rgba(0,102,173,1);
+  border-radius:15px;
+  border:1px solid rgba(0,102,173,1);
+  font-size: 12px;
+}
+.buttonss{
+  text-align: center;
+  line-height: 88rpx;
+  height: 88rpx;
+  background:linear-gradient(90deg,rgba(56,164,239,1) 0%,rgba(0,102,173,1) 100%);
+border-radius:22px;
+color: #ffff !important;
+font-size: 32rpx;
+}
+.phone{
+  height: 100%;
+  width: 60%
+}
+.input-son{
+
+  position: relative;
+background:rgba(244,244,244,1);
+border-radius:21px;
+border:1px solid rgba(204,204,204,1);
+  height: 84rpx;
+
+  padding-left: 40rpx;
+  box-sizing: padding-box;
+}
+
+.input-son2{
+  margin-top: 80rpx;
+}
+
+
+
+.input-son:last-child{
+  margin-top: 80rpx;
+  margin-bottom: 280rpx;
+}

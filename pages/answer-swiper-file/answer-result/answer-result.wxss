@@ -1,0 +1,69 @@
+/* pages/answer-swiper-file/sc-moni-result/sc-moni-result.wxss */
+.container{
+  padding-top: 14rpx;
+  font-size: 28rpx;
+  font-weight: 500;
+}
+.num-box{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.num-box .nums{
+height: 112rpx;
+line-height: 112rpx;
+color: #0066AD;
+font-weight: 600;
+font-size:60rpx;
+}
+/* 表格 */
+.table-box{
+  width: 652rpx;
+  margin: 28rpx auto 0;
+  height:560rpx;
+  border-bottom: 1px solid #DDDDDD;
+}
+.table-item{
+  height: 140rpx;
+  border-top:1px solid #DDDDDD;
+    border-left:1px solid #DDDDDD;
+      border-right:1px solid #DDDDDD;
+      display: flex;
+}
+.tb-item-left{
+  width: 216rpx;
+  line-height:  140rpx;
+  text-align: center;
+  height: 100%;
+  background: #F2F2F2;
+     border-right:1px solid #DDDDDD;
+}
+.tb-item-left2{
+height: calc(100% - 2px);
+}
+.tb-item-rightbox{
+   padding-left: 14rpx ;
+   color: #333333;
+   font-size: 24rpx;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+}
+.footer{
+  margin-top: 56rpx;
+  padding: 0 30rpx;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  color: #fff;
+
+}
+.footer .btn{
+  text-align: center;
+  line-height: 80rpx;
+  width: 318rpx;
+  height: 80rpx;
+  background: #0066AD;
+  border-radius: 8rpx;
+  margin-bottom: 32rpx;
+}

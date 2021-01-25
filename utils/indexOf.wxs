@@ -1,0 +1,28 @@
+function indexOf(arr, value) {
+
+  // if(arr instanceof Array) 
+
+
+
+  if (arr.indexOf(value)>-1) {
+
+    return true;
+   
+  } else {
+    return false;
+  }
+}
+// function strSplit(str, value) {
+//     return str.split(value)
+// }
+
+
+
+
+
+// module.exports.strSplit = strSplit;
+
+// module.exports.indexOf = indexOf;
+module.exports = {
+  indexOf: indexOf
+}

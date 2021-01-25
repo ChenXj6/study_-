@@ -1,0 +1,100 @@
+page {
+    background: #F2F2F2;
+}
+
+.navs {
+    padding: 30rpx 20rpx 28rpx 32rpx;
+    background: rgba(255, 255, 255, 1);
+    margin: 4rpx 0 14rpx;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-title {
+    font-size: 28rpx;
+    font-weight: 500;
+    color: rgba(49, 49, 49, 1);
+    line-height: 40rpx;
+}
+
+.picker {
+    font-size: 30rpx;
+    font-weight: 400;
+    color: rgba(153, 153, 153, 1);
+    line-height: 42rpx;
+}
+
+/* 列表 */
+.banner {
+    padding: 0 20rpx;
+}
+
+.banner-item {
+    padding: 34rpx 20rpx 42rpx 30rpx;
+    background: white;
+    border-radius: 14rpx;
+    position: relative;
+    margin-bottom: 18rpx;
+}
+
+.banner-top {
+    display: flex;
+    align-items: center;
+    font-size: 30rpx;
+    font-weight: 500;
+    color: rgba(51, 51, 51, 1);
+    line-height: 42rpx;
+}
+
+.img-photo {
+    width: 72rpx;
+    height: 72rpx;
+    border-radius: 50%;
+    margin-right: 36rpx;
+}
+
+.banner-uu {
+    width: 100%;
+    margin-top: 34rpx;
+}
+
+.banner-li {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 28rpx;
+    font-weight: 400;
+    color: rgba(153, 153, 153, 1);
+    line-height: 40rpx;
+    margin-bottom: 14rpx;
+}
+.banner-li2{
+    justify-content: center;
+}
+.banner-li:last-child {
+    margin-bottom: 0;
+}
+
+.li-rate {
+    font-size: 28rpx;
+    font-weight: 500;
+    color: rgba(51, 51, 51, 1);
+}
+
+.banner-btn {
+    display: block;
+    width: 138rpx;
+    height: 56rpx;
+    font-size: 24rpx;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+    line-height: 56rpx;
+    text-align: center;
+    background: rgba(0, 102, 173, 1);
+    border-radius: 0px 8rpx 0px 8rpx;
+    position: absolute;
+    top: 0;
+    right: 0;
+}

@@ -1,0 +1,148 @@
+<view class="main">
+	<view class="header">
+		<text class="header-title">{{title}}</text>
+		<text class="header-num">第{{current+1}}题/共{{list_length}}题</text>
+	</view>
+
+
+	<swiper  :duration="150" style="height:{{swiper_height}}" bindanimationfinish="bindanimationfinish" class="swiper-auto" current="{{current}}">
+
+
+		<swiper-item wx:for="{{topicData}}" wx:key="key">
+			<!-- 单选题 -->
+
+
+			<view class="sub-title">
+
+				<text  class="sub-title-text">{{item.type==1?'单选题':''||item.type==2?'多选题':''|| item.type==3?'判断题':''}}</text>
+
+
+				{{item.title}}</view>
+
+			<view class="main-sub" wx:if="{{item.type==1}}">
+				<block wx:for="{{item.answer_list}}" wx:for-item="v" wx:for-index="i" wx:key="key">
+					<!-- 单选 -->
+					<view  wx:if="{{v}}" class="sub-item  {{(ismethod==1?(item.user_answer==i?(item.isquestion==1?'dui':''||item.isquestion==2?'cuo':'' ):''): '')||(ismethod==2?(item.user_answer==i?'com':''):'' )||( ismethod==3?(item.answer==i?'dui':''):'')}}" bindtap="incCurrentFn" data-index="{{index}}" data-i="{{i}}" data-type="{{item.type}}" data-right_answer="{{item.answer}}">
+						<view class="img-sub "   > {{i}}</view>
+						<text style="width:540rpx"  >{{v}} </text>
+					</view>
+				</block>
+			</view>
+
+			<!-- 多选 -->
+			<!-- 确定选对的：判断right_ans里是否存在i,存在就是正确答案  加类  dui -->
+			<!-- 确定选错的：判断user_ans里是否存在i并且不存在于正确答案中， 加类 cuo -->
+			<view class="main-sub" wx:if="{{item.type==2}}">
+				<block wx:for="{{item.answer_list}}" wx:for-item="v" wx:for-index="i" wx:key="key">
+					<view  wx:if="{{v}}" class="sub-item   {{(ismethod==1?( item.isconfirm? (arrs.indexOf(item.answer,i)?'dui':(arrs.indexOf(item.user_answer,i)&&!arrs.indexOf(item.answer,i)?'cuo':'')):(arrs.indexOf(item.user_answer,i)?'com':'' ) ):'')||( ismethod==2?  	(arrs.indexOf(item.user_answer,i)?'com':'' )           :''                  )||(ismethod==3?  (arrs.indexOf(item.answer,i)?'dui':'' )         :''      )}}" bindtap="incCurrentFn" data-index="{{index}}" data-i="{{i}}" data-type="{{item.type}}" data-right_answer="{{item.answer}}">
+						<view class="img-sub  "   > {{i}}</view>
+						<text style="width:540rpx"  >{{v}} </text>
+					</view>
+				</block>
+				<view wx:if="{{ismethod!=3}}" class="some-btn" bindtap="confirmFn" data-index="{{index}}">确定</view>
+			</view>
+			<!-- 判断题 -->
+			<view class="main-sub" wx:if="{{item.type==3}}">
+		
+
+				<view class="sub-item2   {{(ismethod==1?(item.user_answer==1?(item.isquestion==1?'dui':''||item.isquestion==2?'cuo':'' ):''): '')||(ismethod==2? (item.user_answer==1?'com':'') :'') ||(ismethod==3?  (item.answer==1?'dui':'')   :'')            }}" bindtap="incCurrentFn" data-index="{{index}}" data-i="1" data-type="{{item.type}}" data-right_answer="{{item.answer}}">
+					<view class="img-sub img-sub2 "></view>
+					<text>正确</text>
+				</view>
+				<view class="sub-item2  {{(ismethod==1?(item.user_answer==2?(item.isquestion==1?'dui':''||item.isquestion==2?'cuo':'' ):''): '')||(ismethod==2? (item.user_answer==2?'com':'') :'') ||(ismethod==3?  (item.answer==0?'dui':'')   :'')            }}" bindtap="incCurrentFn" data-index="{{index}}" data-i="2" data-type="{{item.type}}" data-right_answer="{{item.answer}}">
+					<view class="img-sub img-sub2 "></view>
+					<text>错误</text>
+				</view>
+			</view>
+			<!-- 先判断ismethod是true练习模式还是false考试模式 -->
+			<!-- 再判断是不是多选有没有点击确定按钮 -->
+			<!-- wx:if="{{  ismethod?    (item.type==2?  (item.isconfirm?   (item.isquestion==2?true:false):false): (item.isquestion==2?true:false)):false}}" -->
+
+
+	   	<view class="main-bot" wx:if="{{ismethod==3?true:(ismethod==1?item.istip:false)}}">
+				<text class="bot-title">错题解析：</text>
+				<text class="bot-content">{{item.analysis}}</text>
+			</view>
+			<view class="replace" style="width:100%;height:250rpx"></view>
+		</swiper-item>
+	</swiper>
+	<!-- 对错计算汇总 -->
+	<view class="foot-nav2" wx:if="{{ismethod!=2}}">
+
+		<view class="fn2-dui-i1 fn2-dui-i">
+
+			<image src="../../../image/dui2.png"></image>
+			<text>{{recordnum.right}}</text>
+		</view>
+		<view class="fn2-dui-i2 fn2-dui-i">
+
+			<image src="../../../image/cuo2.png"></image>
+			<text>{{recordnum.err}}</text>
+		</view>
+	</view>
+	<view class="foot-nav">
+		<view class="nav-next" bindtap="navPreFn">
+			<image class="foot-nav-btn1" src="../../../image/left.png"></image>
+			<text>上一题</text>
+		</view>
+		<!-- 题卡 -->
+		<view class="nav-next" bindtap="togglePopup">
+			<image class="foot-nav-btn2" src="../../../image/tika.png"></image>
+
+			<text>题卡</text>
+		</view>
+		<view class="nav-ok" wx:if="{{code==1&&list_length!=0}}" bindtap="showModalFn">全部移除</view>
+
+		<!-- 移除此题 -->
+		<view class="nav-next"   bindtap="delFn" >
+			<image class="foot-nav-btn2" src="../../../img/del.png"></image>
+			<text>移除此题   </text>
+		</view>
+
+		<view class="nav-next" bindtap="navNextFn">
+			<image class="foot-nav-btn1" src="../../../image/right.png"></image>
+			<text>下一题</text>
+		</view>
+	</view>
+	<view class="popup-box  {{ispopup?'block':''}}">
+		<view class="pop-con">
+			<view class="pop-con-title">单选题 </view>
+			<view class="pop-c-sub">
+				<block wx:for="{{topicData}}" wx:key="key">
+					<view class="pop-c-sub-i  {{item.isquestion?'pop-c-sub-i2':''}}" data-index="{{index}}" bindtap="tapItemTopic" wx:if="{{item.type==1}}">{{index+1}}</view>
+				</block>
+			</view>
+
+
+
+
+			<view class="pop-con-title">多选题 </view>
+			<view class="pop-c-sub">
+				<block wx:for="{{topicData}}" wx:key="key">
+					<view class="pop-c-sub-i" data-index="{{index}}" bindtap="tapItemTopic" wx:if="{{item.type==2}}">{{index+1}}</view>
+				</block>
+			</view>
+
+
+
+
+			<view class="pop-con-title">判断题 </view>
+			<view class="pop-c-sub">
+				<block wx:for="{{topicData}}" wx:key="key">
+					<view class="pop-c-sub-i" data-index="{{index}}" bindtap="tapItemTopic" wx:if="{{item.type==3}}">{{index+1}}</view>
+				</block>
+			</view>
+
+
+
+
+
+		</view>
+		<!-- 按钮 -->
+		<view class="pop-btn-box">
+			<view class="pop-btn" bindtap="togglePopup">继续答题</view>
+		</view>
+	</view>
+</view>
+
+<wxs src="../../../utils/indexOf.wxs" module="arrs" />

@@ -1,0 +1,31 @@
+<!--pages/cook-item/cook-item.wxml-->
+<view class="container rel">
+  <!-- title -->
+  <view class="title-box">
+    <view class=" {{currentIndex==index?'title':'title2'}}"  bindtap="getListFn"  wx:for="{{navList}}"  wx:key="key" data-index="{{index}}">{{item.info.name}}</view>
+ 
+  </view>
+  <!-- 内容 -->
+  <!-- 基础知识 -->
+
+  <view class="sub-content-box" wx:if="{{currentIndex==0}}">
+    <view class="sub-content-item"  bindtap="navTo" wx:for="{{navList[currentIndex].subList}}"  data-id="{{v.id}}"   wx:for-index="i" wx:for-item="v" wx:key="key">
+      <view class="sub-item-left">
+        <text >{{v.name}}</text>
+ 
+      </view>
+      <image class="sub-item-right" src="../../../img/jiantou1.png"></image>
+    </view>
+  </view>
+  <!-- 实操 -->
+  <view class="sub-content-box" wx:if="{{currentIndex==1}}">
+    <view class="sub-content-item"  bindtap="navTo" wx:for="{{navList[currentIndex].subList}}"  data-id="{{v.id}}"    wx:for-index="i" wx:for-item="v" wx:key="key">
+      <view class="sub-item-left">
+        <text style="padding-right:10rpx">{{v.name}}</text>
+      </view>
+      <image class="sub-item-right" src="../../../img/jiantou1.png"></image>
+    </view>
+  </view>
+ 	<view class="replace">{{navList[currentIndex].logingText}}</view>
+
+</view>

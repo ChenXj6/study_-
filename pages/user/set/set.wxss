@@ -1,0 +1,77 @@
+/* pages/set/set.wxss */
+.container{
+
+  height: 99vh;
+  font-size: 30rpx;
+}
+.user-box{
+   background-color: #FFF;
+   margin-top: 2px;
+     padding:20rpx 24rpx;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+}
+.image{
+width: 110rpx;
+height: 110rpx;
+border-radius: 50%;
+
+
+}
+.text{
+  color: #7F8895;
+}
+.user-box2{
+  height: 54rpx;
+}
+.inputs{
+  text-align: right;
+}
+.btn{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 46rpx;
+  margin: auto;
+  width: 536rpx;
+  height: 100rpx;
+  color: #FFFFFF;
+  font-size: 36rpx;
+  line-height: 100rpx;
+  background:linear-gradient(90deg,rgba(56,164,239,1) 0%,rgba(0,102,173,1) 100%);
+border-radius:25px;
+text-align: center;
+}
+
+/* 新增 */
+.sex-box{
+  display: flex;
+
+  justify-content: space-between;
+}
+.sex-i{
+  height: 100%;
+  font-size: 32rpx;
+  display: flex;
+  align-items: center;
+  margin-left: 32rpx;
+
+}
+.sex-i .radius{
+width: 28rpx;
+height: 28rpx;
+border-radius: 50%;
+margin-right: 20rpx;
+
+} 
+.sex-i .radius1{
+  background-color: #F2F2F2;
+  
+  } 
+  .sex-i .radius2{
+    background-color: #fff;
+    border: 4px solid #5C97C5;
+  box-sizing: border-box;
+    
+    } 

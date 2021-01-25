@@ -1,0 +1,97 @@
+<view class="container  ">
+
+	<!-- 视频-->
+	<!-- <view class="chuji-box"  wx:if="{{isshow==0}}">
+		<view class="title">视频</view>
+		<view class="text-box">
+			<block wx:for="{{data}}" wx:key="key">
+				<view class="text1 text text-color1" bindtap="navTo"  data-id="{{item.id}}"   data-index="{{index}}"   data-type="1">
+					<image class="img" src="{{index==0?'../../img/class-1.png' :'../../img/class-2.png' }}"></image>
+          	<text>{{item.name}}</text>
+				</view>
+			</block>
+		</view>
+	</view> -->
+
+
+
+
+	<!-- 音频-->
+	<!-- <view class="chuji-box">
+		<view class="title">音频</view>
+		<view class="text-box">
+			<block wx:for="{{data}}" wx:key="key">
+				<view class="text1 text text-color2" bindtap="navTo"  data-id="{{item.id}}"   data-index="{{index}}"   data-type="2">
+					<image class="img" src="{{index==0?'../../img/class-1.png' :'../../img/class-2.png' }}"></image>
+          	<text>{{item.name}}</text>
+				</view>
+			</block>
+		</view>
+	</view> -->
+
+
+	<!-- 阅读-->
+	<!-- <view class="chuji-box">
+		<view class="title">阅读</view>
+		<view class="text-box">
+			<block wx:for="{{data}}" wx:key="key">
+				<view class="text1 text text-color3" bindtap="navTo"  data-id="{{item.id}}"   data-index="{{index}}"   data-type="3">
+					<image class="img" src="{{index==0?'../../img/class-1.png' :'../../img/class-2.png' }}"></image>
+          	<text>{{item.name}}</text>
+				</view>
+			</block>
+		</view>
+	</view> -->
+
+
+	<!-- 新增修改 -->
+
+
+<!-- <view style="text-align:center"  wx:if="{{isshow==1}}">---暂无更多---</view> -->
+<image  bindtap="tapImage"  wx:if="{{isshow==0}}" class="class-bg" src="/img/class-bg.png"></image>
+
+	<view class="sub-cont">
+		<!-- 视频 -->
+		<view class="sc-item-box" wx:if="{{isshow==0}}">
+			<view class="item" wx:for="{{data}}" wx:key="key"  bindtap="navTo"  data-id="{{item.id}}"   data-index="{{index}}"   data-type="1">
+				<image src="{{index==0?'/img/c1.png':'/img/c2.png'}}" class="i-img"></image>
+				<view class="item-text">
+					<text>{{item.name}}</text>
+					<text>视频课程</text>
+				</view>
+			</view>
+		</view>
+
+
+
+		<!-- 音频 -->
+		<view class="sc-item-box" wx:if="{{isshow==0}}">
+			<view class="item" wx:for="{{data}}" wx:key="key"  bindtap="navTo"  data-id="{{item.id}}"   data-index="{{index}}"   data-type="2">
+					<image src="{{index==0?'/img/c3.png':'/img/c4.png'}}" class="i-img"></image>
+				<view class="item-text">
+					<text>{{item.name}}</text>
+					<text>音频课程</text>
+				</view>
+			</view>
+		</view>
+
+		<!-- 阅读 -->
+		<view class="sc-item-box" >
+			<view class="item" wx:for="{{data}}" wx:key="key"  bindtap="navTo"  data-id="{{item.id}}"   data-index="{{index}}"   data-type="3">
+					<image src="{{index==0?'/img/c5.png':'/img/c6.png'}}" class="i-img"></image>
+				<view class="item-text">
+					<text>{{item.name}}</text>
+					<text>书本课程</text>
+				</view>
+			</view>
+		</view>
+	</view>
+
+
+
+
+
+
+
+
+</view>

@@ -1,0 +1,46 @@
+<view class="navs">
+	<text class="nav-title">选择日期</text>
+	<picker mode="date" value="{{date}}" start="2015-09-01" end="{{date}}" bindchange="bindDateChange">
+		<view class="picker">
+			{{date}}
+		</view>
+	</picker>
+</view>
+<view class="banner">
+	<view class="banner-item" wx:for="{{listData}}" wx:key="key">
+		<text class="banner-btn" data-id="{{item.id}}" bindtap="lookUs">查看个人</text>
+		<view class="banner-top">
+			<image src="{{item.avatar}}" class="img-photo"></image>
+			<text>{{item.nickname}}</text>
+		</view>
+		<view class="banner-uu">
+			<view class="banner-li banner-li2" wx:if="{{item.istext==1}}">当日---暂无更多--- </view>
+			<!-- 视频 -->
+			<view class="banner-li" wx:if="{{item.video_log.length}}">
+				<text>{{item.video_log.name}}</text>
+				<text class="li-rate"   >已看{{item.video_log.length}}</text>
+			</view>
+			<!-- 	题库记录 -->
+			<view class="banner-li" wx:if="{{item.curriculumn_log.process}}">
+				<text>{{item.curriculumn_log.name}}</text>
+				<text class="li-rate" >已做{{item.curriculumn_log.process}}</text>
+			</view>
+			<!-- 	模拟测试 -->
+			<view class="banner-li" wx:if="{{item.simulationTest.score}}">
+				<text>{{item.simulationTest.name}}</text>
+				<text class="li-rate"  >{{item.simulationTest.score}}分</text>
+			</view>
+			<!-- 		实操模拟 -->
+			<view class="banner-li" wx:if="{{item.realOperation.score}}">
+				<text>{{item.realOperation.name}}</text>
+				<text class="li-rate"  >{{item.realOperation.score}}分</text>
+			</view>
+		</view>
+		<!-- 		历年真题	 -->
+		<view class="banner-li" wx:if="{{item.trueSubject.score}}">
+			<text>{{item.trueSubject.name}}</text>
+			<text class="li-rate"  >{{item.trueSubject.score}}分</text>
+		</view>
+	</view>
+	<view class="replace">{{logingText}}</view>
+</view>
